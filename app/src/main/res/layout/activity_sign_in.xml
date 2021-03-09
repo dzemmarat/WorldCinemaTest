@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn"
+    android:background="@color/colorPrim">
+
+    <ImageView
+        android:layout_width="207dp"
+        android:layout_height="134dp"
+        android:src="@drawable/logo_one"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="132dp"/>
+
+    <EditText
+        android:id="@+id/etsignemail"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:hint="E-mail"
+        android:layout_marginTop="370dp"
+        android:layout_gravity="center_horizontal"
+        android:textColorHint="@color/hintColor"
+        android:background="@drawable/bg_sign_et"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/etsignpassword"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:hint="Пароль"
+        android:layout_marginTop="430dp"
+        android:layout_gravity="center_horizontal"
+        android:textColorHint="@color/hintColor"
+        android:background="@drawable/bg_sign_et"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:inputType="textEmailAddress"/>
+
+    <Button
+        android:id="@+id/btsign"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_btn_sign"
+        android:layout_gravity="center_horizontal"
+        android:text="Войти"
+        android:textAllCaps="false"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="600dp"/>
+
+</FrameLayout>
