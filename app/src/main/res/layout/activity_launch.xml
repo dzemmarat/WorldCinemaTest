@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/colorPrim"
     android:layout_height="match_parent"
-    tools:context=".LaunchScreen">
+    tools:context=".launch.LaunchScreen">
     
     <ImageView
         android:layout_width="247dp"
