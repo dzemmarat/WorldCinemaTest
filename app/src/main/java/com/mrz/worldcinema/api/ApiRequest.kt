@@ -19,5 +19,7 @@ interface ApiRequest {
     suspend fun signin(@Field("email") email: String, @Field("password") password: String):Response<Token>
 
     @GET("movies/cover")
-    fun getImg(): Response<MovieGson>
+    fun getCover(): Response<MovieGson>
+
+
 }

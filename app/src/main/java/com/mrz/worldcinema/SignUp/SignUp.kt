@@ -34,17 +34,21 @@ class SignUp : AppCompatActivity() {
                 }
             }
         })
-        if (etSignUpName.text  == null) { etSignUpName.error = "поле должно быть заполненно" }
-        if (etSignUpSecondName.text == null) { etSignUpSecondName.error = "поле должно быть заполненно" }
-        if (etSignUpEmail.text == null) { etSignUpEmail.error = "поле должно быть заполненно" }
-        if (etSignUpPassword.text == null) { etSignUpPassword.error = "поле должно быть заполненно" }
-        if (etSignUpPasswordRepeat.text == null) { etSignUpPasswordRepeat.error = "поле должно быть заполненно" }
-        if (etSignUpPasswordRepeat.text.toString() != etSignUpPassword.text.toString() ) { etSignUpPasswordRepeat.error = "поле должно быть заполненно" }
+
+        if (etSignUpName.getText().toString().equals("")) { etSignUpName.error = "Заполните поле" }
+        if (etSignUpSecondName.getText().toString().equals("")) { etSignUpSecondName.error = "Заполните поле" }
+        if (etSignUpEmail.getText().toString().equals("")) { etSignUpEmail.error = "Заполните поле" }
+        if (etSignUpPassword.getText().toString().equals("")) { etSignUpPassword.error = "Заполните поле" }
+        if (etSignUpPasswordRepeat.getText().toString().equals("")) { etSignUpPasswordRepeat.error = "Заполните поле" }
+        if (etSignUpPassword.text != etSignUpPasswordRepeat.text) { etSignUpPasswordRepeat.error = "Пароли не совпадают" }
 
         btSignUpHaveAccount.setOnClickListener {
-            intent = Intent(this, SignIn::class.java)
             signUp()
-            startActivity(intent)
+            startActivity(Intent(this, SignIn::class.java))
+        }
+
+        btSignUpLogIn.setOnClickListener {
+            startActivity(Intent(this, SignIn::class.java))
         }
     }
 
