@@ -2,8 +2,11 @@ package com.mrz.worldcinema.api
 
 import com.mrz.apikotlin.api.MovieGson
 import com.mrz.apikotlin.api.Token
+import com.mrz.worldcinema.data.MoviesGson
+import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*
+
 
 interface ApiRequest {
     @Headers("Authorization: Bearer ktoya")
@@ -20,6 +23,9 @@ interface ApiRequest {
 
     @GET("movies/cover")
     fun getCover(): Response<MovieGson>
+
+    @GET("movies")
+    fun getMovies(): Response<MoviesGson>
 
 
 }
