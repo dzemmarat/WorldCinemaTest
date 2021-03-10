@@ -24,6 +24,9 @@ interface ApiRequest {
     @GET("movies/cover")
     fun getCover(): Response<MovieGson>
 
+    @GET("/api/get")
+    fun getData(): Call<MovieGson>
+
     @GET("movies")
     fun getMovies(): Response<MoviesGson>
 
